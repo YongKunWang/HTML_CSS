@@ -53,7 +53,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 行为标准：行为是指网页模型的定义和人机交互的编写，主要学习JavaScript
 ```
 
-![](../media/gx.png)
+![](../media/html/gx.png)
 
 ## HTML 初识
 
@@ -85,7 +85,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 4. body标签：文档的主体
 ```
 
-![](../media/pig.png)
+![](../media/html/pig.png)
 
 ## HTML的标签分类
 
@@ -158,7 +158,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 >
 > 标题标签只有6级
 
-![](../media/标题标签.png)
+![](../media/html/标题标签.png)
 
 #### 段落标签
 
@@ -168,25 +168,25 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 
 `<br />`
 
-![](../media/段落和换行标签.png)
+![](../media/html/段落和换行标签.png)
 
 #### 水平线标签
 
 `<hr />`
 
-![](../media/水平线标签.png)
+![](../media/html/水平线标签.png)
 
 #### `div span`标签
 
 `div span`标签时没有语义的，是网页布局的2个盒子
 
-![](../media/div和span.png)
+![](../media/html/div和span.png)
 
 #### 文本格式化标签
 
-![](../media/tab.png)
+![](../media/html/tab.png)
 
-![](../media/字体特效.png)
+![](../media/html/字体特效.png)
 
 #### 图像标签
 
@@ -194,9 +194,9 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 <img src="URL" />
 ```
 
-![](../media/img.png)
+![](../media/html/img.png)
 
-![](../media/图像标签.png)
+![](../media/html/图像标签.png)
 
 #### 链接标签
 
@@ -212,7 +212,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 
 如果未确定链接目标，可暂时使用`#`代替，`<a href="#"> xxx </a>`表示链接暂时为一个空链接
 
-![](../media/链接标签.png)
+![](../media/html/链接标签.png)
 
 #### 锚点定位
 
@@ -228,7 +228,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 <a href="test.html#id名称">链接文字</a>
 ```
 
-![](../media/锚点定位.png)
+![](../media/html/锚点定位.png)
 
 #### `base` 标签
 
@@ -245,11 +245,11 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 </html>
 ```
 
-![](../media/base标签.png)
+![](../media/html/base标签.png)
 
 #### 特殊字符
 
-![](../media/zifu.png)
+![](../media/html/zifu.png)
 
 #### 注释标签
 
@@ -266,7 +266,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 
 认识各种标签
 
-![](../media/a.png)
+![](../media/html/a.png)
 
 
 
@@ -296,7 +296,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 -->
 ```
 
-![](../media/有序和无序.png)
+![](../media/html/有序和无序.png)
 
 #### 自定义列表
 
@@ -322,7 +322,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 
 #### 表格属性
 
-![](../media/tt.png)
+![](../media/html/tt.png)
 
 #### 表头标签
 
@@ -330,7 +330,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 使用<th></th>替代<td></td>
 ```
 
-![](../media/th.png)
+![](../media/html/th.png)
 
 #### 表格结构
 
@@ -363,9 +363,9 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 - 表格中没有列元素
 - 表格不要纠结于外观，那是CSS的作用
 
-![](../media/表格1.png)
+![](../media/html/表格1.png)
 
-![](../media/合并单元格.png)
+![](../media/html/合并单元格.png)
 
 ### 表单标签
 
@@ -375,7 +375,7 @@ Web标准不是一个标注，而是W3C和其他标准化组织制定的一系�
 <input /> 单标签
 ```
 
-![](../media/input.png)
+![](../media/html/input.png)
 
 #### `label`标签
 
