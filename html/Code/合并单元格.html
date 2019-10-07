@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>合并单元格</title>
+</head>
+<body>
+	<table border="1" width="500">
+		<!-- 合并流程：
+				1. 先确定跨行还是跨列
+				2. 确定合并的数量
+				3. 删除多余单元格
+				4.遵循顺序 从上 从左
+		 -->
+		<tr>
+			<th>11</th>
+			<th>12</th>
+			<th>13</th>
+		</tr>
+		<tr align="center">
+			<td colspan="2">21</td>
+			
+			<td rowspan="3">23</td>
+		</tr>
+		<tr align="center">
+			<td>31</td>
+			<td>32</td>
+			<!-- <td>33</td> -->
+		</tr>
+		<tr align="center">
+			<td>41</td>
+			<td>42</td>
+			<!-- <td>43</td> -->
+		</tr>
+	</table>
+</body>
+</html>
