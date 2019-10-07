@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>input控件</title>
+</head>
+<body>
+	<table width="700" border="1" cellpadding="0" cellspacing="0"> 
+		<caption>
+			<h4 style="color: pink;font-size: 25px;">
+			青春不常在，抓紧谈恋爱
+			</h4>
+		</caption>
+		<!-- 地区 -->
+		<tr height="60">
+			<th>所在地区</th>
+			<td><input type="text" name="local" value="北京" style="color: #ccc;" /></td>
+		</tr>
+		<!-- 用户名 -->
+		<tr height="60">
+			<th>用户名</th>
+			<td><input type="text" name="name" value="andy" style="color: #000;" /></td>
+		</tr>
+		<!-- 密码 -->
+		<tr height=50px>
+			<th>密码</th>
+			<td><input type="password" name="name" value="123456" style="color: #ccc;" /></td>
+		</tr>
+		<!-- 年龄 -->
+		<tr height="60">
+			<th>年龄</th>
+			<td >
+				<select name="year" value="">
+					<option value="">选择年份</option>
+					<option value="">1995</option>
+					<option value="">1997</option>
+					<option value="">1998</option>
+					<option value="">1999</option>
+					<option value="">2000</option>
+					<option value="">2001</option>
+				</select>
+
+				<select name="month" value="">
+					<option value="">选择月份</option>
+					<option value="">01</option>
+					<option value="">02</option>
+					<option value="">03</option>
+					<option value="">04</option>
+					<option value="">05</option>
+					<option value="">06</option>
+					<option value="">07</option>
+					<option value="">08</option>
+					<option value="">09</option>
+					<option value="">10</option>
+					<option value="">11</option>
+					<option value="">12</option>
+				</select>
+			</td>
+		</tr>
+		
+		<tr height="60">
+			<th>性别</th>
+			<td>
+				男<input type="radio" name="sex" value="male" />
+				女<input type="radio" name="sex" value="female" checked="checked" />
+				人妖<input type="radio" name="sex" value="no" />
+			</td>
+		</tr>
+
+		<tr>
+			<th>喜欢的类型</th>
+			<td>
+				妩媚 <input type="checkbox" name="type" value="wumei" />
+				气质 <input type="checkbox" name="type" value="气质" />
+				小鲜肉 <input type="checkbox" name="type" value="xiaoxianrou" />
+				鹿晗 <input type="checkbox" name="type" value="luhan" checked="checked" />
+			</td>
+		</tr>
+
+		<tr>
+			<th></th>
+			<td>
+				<input type="button" value="注册" />
+				<input type="submit" value="提交" />
+				<input type="reset" value="重置" />
+				<input type="image" src="../media/btn.png" />
+			</td>
+
+		</tr>
+
+		<tr>
+			<th>上传头像</th>
+			<td>
+				<input type="file" value="选择文件">
+			</td>
+		</tr>
+
+		<tr>
+			<th>给我留言</th>
+			<td>
+				<textarea name="" id="" cols="50" rows="10" style="color: #ccc;">
+				</textarea>
+			</td>
+		</tr>
+
+	</table>
+</body>
+</html>
