@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优先级</title>
+	<style>
+		/*0,0,0,1*/
+		div {
+			color: red;
+		}
+		/*0,0,1,0*/
+		.ys {
+			color: blue;
+		}
+		/*0100*/
+		#yss {
+			color: pink;
+		}
+		/*无穷大*/
+		div {
+			color: orange !important;
+		}
+	</style>
+</head>
+<body>
+	<!-- 1,0,0,0 -->
+	<div class="ys" id="yss" style="color: #3333;"> 我是优先级测试文本</div>
+</body>
+</html>

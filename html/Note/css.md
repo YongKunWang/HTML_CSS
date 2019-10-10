@@ -850,6 +850,10 @@ CSS最后的执行口诀：  龙生龙，凤生凤，老鼠生的孩子会打洞
 
 ![](../media/CSS/继承性.png)
 
+```
+恰当的使用继承可以简化代码，降低CSS的复杂性。子元素可以继承父元素的样式(text- gont- line- 这些元素开头的都可以进行继承，以及color属性)
+```
+
 ## CSS 优先级
 
 在定义CSS样式是=时，会出现两个或者更多规则应用在同一个元素上，这时会出现优先级的问题
@@ -857,11 +861,250 @@ CSS最后的执行口诀：  龙生龙，凤生凤，老鼠生的孩子会打洞
 在考虑权重时，初学者还需要注意一些特殊情况
 
 ```
-继承样式的权重为0 子元素定义的样式会覆盖继承来的样式
+继承样式的权重为0 子元素定义的样式会覆盖继承来的样式 “以自身为准”
 行内样式优先级>100
 权重相同时，CSS遵循就近原则
 CSS定义了一个!important命令，该命令被赋予最大的优先级，也就是说不管权重如何以及样式位置的远近，!important都具有最大的优先级
 ```
 
+
+
 ### CSS特殊性
 
+CSS的权重有一套计算方法
+
+| 继承或者*贡献的权重 | 0,0,0,0 |
+| ------------------- | ------- |
+| 每个元素标签        | 0,0,0,1 |
+| 每个类或者伪类      | 0,0,1,0 |
+| 每一个ID            | 0,1,0,0 |
+| 每个行内样式        | 1,0,0,0 |
+| !important          | ∞       |
+
+![](../media/CSS/优先级测试.png)
+
+- 权重可以进行叠加
+
+```
+div  ul li 0001 0001 0001 0,0,0,3
+.nav ul li 0010 0001 0001 0,0,1,2
+a:hover    0001 0010      0,0,1,1
+#nav p     0100 0001      0,1,0,1
+```
+
+**注意**
+
+数位之间没有进制
+
+- 继承的权重为0
+- 优先级总结：
+  - 使用了!important
+  - 内嵌在HTML中的style中的声明
+  - 使用ID选择器
+  - 使用class选择器
+  - 使用元素标签选择器
+  - 只包含一个通用选择器的规则
+  - 同一个类选择器遵循就近原则
+
+# CSS 背景
+
+CSS可以添加背景，以及进行图片的设置
+
+| `background-color`      | 背景颜色                                           |
+| ----------------------- | -------------------------------------------------- |
+| `background-image`      | 背景图片地址                                       |
+| `background-repeat`     | 是否平铺                                           |
+| `background-position`   | 背景位置                                           |
+| `background-attachment` | 背景固定还是滚动                                   |
+| `background`            | `color` ` image` `repeat` `attachment` ` position` |
+
+## `background-image`  
+
+语法格式：
+
+```
+background-image: none | url(url(不添加引号))
+```
+
+如果盒子太大，背景图片剩余的部分会被`background-color`选项所填充
+
+## `background-repeat`  
+
+语法格式：
+
+```CSS
+background-repeat: repeat(默认) | no-repeat | repeat-x | repeat-y
+```
+
+## `background-position`  
+
+语法格式：
+
+```CSS
+background-position: length || length
+background-position: position || position
+```
+
+`length:`百分数或者由浮点数和单位标识组成的长度值
+
+`position:`top center bottom left right
+
+- 说明：
+  - 设置位置属性必须要指定图片：默认值为(0%0%)
+  - 如果只是指定了一个值，该值将作为横坐标值，纵坐标默认为50%，第二个值将用于纵坐标
+- 注意：
+  - position后面的是x坐标和y坐标，可以使用方位名词或者精确单位
+  - 如果方位名词和精确单位混合使用，则必须x坐标在前面，y坐标在后面
+
+实际工作中用的最多的是背景图片居中对齐了
+
+## `background-attachment`
+
+语法格式：
+
+```CSS
+background-attachment: scroll | ifxed
+```
+
+- scroll 背景图片随着对象滚动
+- fixed背景图片固定
+
+## `background`简写
+
+语法格式：
+
+```CSS
+background: color url() repeat attachment position
+```
+
+![](../media/CSS/背景设置.png)
+
+##  背景透明
+
+语法格式：
+
+```css
+background: rgb(0,0,0,0.3)
+```
+
+最后一个参数是指alpha透明度，在0~1之间
+
+背景透明是指盒子背景半透明，而非盒子内容
+
+![](../media/CSS/背景透明.png)
+
+# 盒子模型 
+
+- 盒子模型
+- 浮动
+- 定位
+- 其余都是细节
+
+盒子模型的组成：
+
+- padding
+- border
+- margin
+
+## ` border`
+
+语法： 
+
+~~~css
+border : border-width || border-style(默认为no) || border-color 
+~~~
+
+~~~
+none：没有边框即忽略所有边框的宽度（默认值）
+
+solid：边框为单实线(最为常用的)
+
+dashed：边框为虚线  
+
+dotted：边框为点线
+
+double：边框为双实线
+~~~
+### 盒子边框写法总结表
+
+|              |                                                              |                                                              |
+| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 设置内容     | 样式属性                                                     | 常用属性值                                                   |
+| 上边框       | border-top-style:样式; border-top-width:宽度;border-top-color:颜色;border-top:宽度 样式 颜色; |                                                              |
+| 下边框       | border-bottom-style:样式;border- bottom-width:宽度;border- bottom-color:颜色;border-bottom:宽度 样式 颜色; |                                                              |
+| 左边框       | border-left-style:样式; border-left-width:宽度;border-left-color:颜色;border-left:宽度 样式 颜色; |                                                              |
+| 右边框       | border-right-style:样式;border-right-width:宽度;border-right-color:颜色;border-right:宽度 样式 颜色; |                                                              |
+| 样式综合设置 | border-style:上边 [右边 下边 左边];                          | none无（默认）、solid单实线、dashed虚线、dotted点线、double双实线 |
+| 宽度综合设置 | border-width:上边 [右边 下边 左边];                          | 像素值                                                       |
+| 颜色综合设置 | border-color:上边 [右边 下边 左边];                          | 颜色值、#十六进制、rgb(r,g,b)、rgb(r%,g%,b%)                 |
+| 边框综合设置 | border:四边宽度 四边样式 四边颜色;                           |                                                              |
+
+		border-top: 1px solid red; /*上边框*/
+		border-bottom: 2px solid green; /*下边框*/
+		border-left: 1px solid blue;
+		border-right: 5px solid pink;
+		border: 1px solid red;
+
+![](../media/CSS/边框问题.png)
+
+
+
+
+
+### 表格的细线边框
+
+以前学过的html表格边框很粗，这里只需要CSS一句话就可以美观起来。 让我们真的相信，CSS就是我们的白马王子（白雪公主）。
+
+table{ border-collapse:collapse; }  collapse 单词是合并的意思
+
+border-collapse:collapse; 表示相邻边框合并在一起。
+
+**使用并集8**
+
+![](../media/CSS/细线表格.png)
+
+### 圆角边框(CSS3)
+
+从此以后，我们的世界不只有矩形。radius 半径（距离）
+
+语法格式：
+
+~~~css
+border-radius: 50%;
+~~~
+
+
+
+## 内边距（padding）
+
+padding属性用于设置内边距。  是指 边框与内容之间的距离。
+
+padding-top:上内边距
+
+padding-right:右内边距
+
+padding-bottom:下内边距
+
+padding-left:左内边距
+
+ ![](../media/CSS/w.jpg)注意：  后面跟几个数值表示的意思是不一样的。
+
+| 值的个数 | 表达意思           |
+| -------- | ------------------ |
+| 1个值    | 上下左右           |
+| 2个值    | 上下 左右          |
+| 3个值    | 上 左右 下         |
+| 4个值    | 上 右 下 左 顺时针 |
+
+课堂案例：  新浪导航
+
+![](../media/CSS/新浪导航栏.png)
+
+## padding 注意的问题：
+
+- padding会撑开明确标注有width和height的盒子
+- 如何在保证盒子不变：
+  - 增加padding
+  - 减少width和height
+
+![](../media/CSS/2盒子问题.png)
