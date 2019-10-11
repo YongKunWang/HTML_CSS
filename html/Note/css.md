@@ -1108,3 +1108,75 @@ padding-left:左内边距
   - 减少width和height
 
 ![](../media/CSS/2盒子问题.png)
+
+法2：指指定盒子的padding-left 和 padding-top
+
+![](../media/CSS/两种盒子居中.png)
+
+- 练习
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻列表</title>
+	<style>
+	/*全局设置*/
+		* {
+			padding: 0px;
+			margin: 0px;	
+		}
+		li {
+			list-style: none;
+		}
+		body {
+			background-color: #EEEEEE;
+		}
+		.artist {
+			width: 380px;
+			height: 263px;
+			border: 1px solid #CCCCCC;
+			margin: 100px;
+			padding: 20px 15px 0;
+		}
+		.artist h4 {
+			font-size:22px;
+			color: #202026;
+			border-bottom: 1px solid #CCCCCC;
+			padding-bottom: 4px;
+		}
+		.artist ul li {
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px dashed #CCCCCC;
+			text-indent: 2em;
+		}
+		.artist ul a {
+			text-decoration: none;
+
+			color: #333333;
+		}
+		.artist ul a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div class="artist">
+		<h4>最新文章/New Articles</h4>
+		<ul>
+			<li><a href="#">北京招聘网页设计，平面设计，php</a></li>
+			<li><a href="#">体验javascript的魅力</a></li>
+			<li><a href="#">jquery世界来临</a></li>
+			<li><a href="#">网页设计师的梦想</a></li>
+			<li><a href="#">jquery中的链式编程是什么</a></li>
+		</ul>
+	</div>
+</body>
+</html>
+```
+
+
+
+![](../media/CSS/小盒子.png)
