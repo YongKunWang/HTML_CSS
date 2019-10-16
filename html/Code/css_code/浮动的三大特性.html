@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动的三大特性</title>
+	<style>
+	/*float特性1*/
+		.div1 {
+			width: 640px;
+			height: 300px;
+			background-color: green;
+		}
+		.div2 {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			float:left;
+	
+		}
+		.div3 {
+			width: 210px;
+			height: 210px;
+			background-color: purple;
+			float: left;
+		}
+		.div4 {
+			width: 220px;
+			height: 220px;
+			background-color: red;
+			float: left;
+		}
+		.div5 {
+			height: 100px;
+			background-color: pink;
+			float: left; /*可以让元素默认转换为行内块元素的特性*/
+		}
+		span {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+			float: left; /*如果已经结行内元素添加了浮动效果，此时不需要转化这个元素也可以有宽高*/
+		}
+
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<div class="div2"></div>
+		<div class="div3"></div>
+		<div class="div4"></div>
+	</div>
+	<div class="div5">浮动特性之三</div>
+	<span>dsadsadada</span>
+	
+</body>
+</html>
